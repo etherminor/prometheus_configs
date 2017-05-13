@@ -126,5 +126,5 @@ receivers:
 
 - name: 'team-ethereum-mails'
   email_configs:
-  - to: 'etherminor+alerts@gmail.com'
+  - to: 'trigger@applet.ifttt.com'
 
