@@ -1,0 +1,8 @@
+wget https://github.com/prometheus/alertmanager/releases/download/v0.6.2/alertmanager-0.6.2.linux-amd64.tar.gz
+wget https://github.com/prometheus/prometheus/releases/download/v1.6.2/prometheus-1.6.2.linux-amd64.tar.gz
+tar xvfz prometheus-*.tar.gz
+tar xvfz alertmanager-0.6.2.linux-amd64.tar.gz
+
+cp alertmanager/simple.yml  alertmanager-0.6.2.linux-amd64/
+# enter password
+

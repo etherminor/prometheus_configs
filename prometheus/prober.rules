@@ -1,0 +1,6 @@
+ethereum_prober:last_hashrate_timestamp_ms:staleness_seconds = time() - last_hashrate_timestamp_ms / 1000
+
+#ALERT HashrateTooLow IF hashrate < 138000000 FOR 10m ANNOTATIONS {}
+ALERT HashrateTooLow IF hashrate < 148000000 FOR 1m ANNOTATIONS {}
+#ALERT HashrateTimestampTooOld IF ethereum_prober:last_hashrate_timestamp_ms:staleness_seconds > 600 FOR 10m ANNOTATIONS {}
+ALERT HashrateTimestampTooOld IF ethereum_prober:last_hashrate_timestamp_ms:staleness_seconds > 1 FOR 1m ANNOTATIONS {}
