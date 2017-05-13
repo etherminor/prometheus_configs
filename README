@@ -5,4 +5,7 @@ tar xvfz alertmanager-0.6.2.linux-amd64.tar.gz
 
 cp alertmanager/simple.yml  alertmanager-0.6.2.linux-amd64/
 # enter password
-
+# copy over prometheus config
+# start them both up in screen
+# tunnel the interfaces over if you need them
+# ssh -L 9090:localhost:9090 -L 9093:localhost:9093
