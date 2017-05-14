@@ -3,7 +3,7 @@ ethereum_prober:last_hashrate_timestamp_ms:staleness_seconds = time() - last_has
 
 # Alerts.
 ALERT HashrateTooLow 
-  IF hashrate < 138000000
+  IF submitted_hashrate < 138000000
   FOR 10m
   LABELS {severity="page"} 
   ANNOTATIONS {}
