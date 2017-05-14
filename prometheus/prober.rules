@@ -1,4 +1,15 @@
+# Standing rules.
 ethereum_prober:last_hashrate_timestamp_ms:staleness_seconds = time() - last_hashrate_timestamp_ms / 1000
 
-ALERT HashrateTooLow IF hashrate < 138000000 FOR 10m ANNOTATIONS {}
-ALERT HashrateTimestampTooOld IF ethereum_prober:last_hashrate_timestamp_ms:staleness_seconds > 600 FOR 10m ANNOTATIONS {}
+# Alerts.
+ALERT HashrateTooLow 
+  IF hashrate < 138000000
+  FOR 10m
+  LABELS {severity="page"} 
+  ANNOTATIONS {}
+
+ALERT HashrateTimestampTooOld
+  IF ethereum_prober:last_hashrate_timestamp_ms:staleness_seconds > 600
+  FOR 3m
+  LABELS {severity="page"} 
+  ANNOTATIONS {}
