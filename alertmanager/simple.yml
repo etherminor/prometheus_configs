@@ -29,7 +29,7 @@ route:
 
   # If an alert has successfully been sent, wait 'repeat_interval' to
   # resend them.
-  repeat_interval: 3h 
+  repeat_interval: 30m 
 
   # A default receiver
   receiver: ifttt-page
