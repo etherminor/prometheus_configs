@@ -9,7 +9,7 @@ ALERT HashrateTooLow
   ANNOTATIONS {}
 
 ALERT HashrateTimestampTooOld
-  IF ethereum_prober:last_hashrate_timestamp_ms:staleness_seconds > 600
+  IF ethereum_prober:last_hashrate_timestamp_ms:staleness_seconds > 900
   FOR 3m
   LABELS {severity="page"} 
   ANNOTATIONS {}
